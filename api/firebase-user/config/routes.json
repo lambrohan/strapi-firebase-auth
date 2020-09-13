@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/firebase-users",
+      "handler": "firebase-user.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/firebase-users/count",
+      "handler": "firebase-user.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/firebase-users/:id",
+      "handler": "firebase-user.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/firebase-users",
+      "handler": "firebase-user.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/firebase-users/:id",
+      "handler": "firebase-user.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/firebase-users/:id",
+      "handler": "firebase-user.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

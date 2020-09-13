@@ -5,7 +5,6 @@ const serviceAccount = require("../../serviceAccountKey.json"); // add serviceAc
 module.exports = () => {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://<firebase-project-id>.firebaseio.com",
   });
   strapi.firebase = admin;
 };

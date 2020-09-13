@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "firebase_users",
+  "info": {
+    "name": "Firebase User"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "uid": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

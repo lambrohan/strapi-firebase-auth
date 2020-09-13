@@ -112,3 +112,5 @@ license.txt
 exports
 .cache
 build
+/serviceAccountKey.json
+/temp.js

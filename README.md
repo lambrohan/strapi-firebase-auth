@@ -12,4 +12,4 @@ Learn how to integrate firebase authentication into your strapi app.
 
 [Read Medium Article](https://medium.com/@lambrohan/integrating-firebase-auth-into-strapi-9ed106ce8dee)
 
-[Create Owners Policy](https://medium.com/@lambrohan/strapi-with-firebase-auth-owners-policy-f346a0457ffb)
+[Create Owner's Policy](https://medium.com/@lambrohan/strapi-with-firebase-auth-owners-policy-f346a0457ffb)

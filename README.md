@@ -2,6 +2,8 @@
 
 Learn how to integrate firebase authentication into your strapi app.
 
+See `permissions.js` & `controllers/firebase-user.js`
+
 #### Install dependencies using NPM or Yarn
 
 `yarn install`

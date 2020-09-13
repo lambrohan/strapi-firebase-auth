@@ -30,6 +30,7 @@ module.exports = async (ctx, next) => {
           .auth()
           .verifyIdToken(idToken);
         ctx.state.user = { ...decodedToken };
+        ctx.state.user.id = decodedToken.strapi_uid;
         return await next();
       } catch (error) {
         return handleErrors(ctx, err, "unauthorized");

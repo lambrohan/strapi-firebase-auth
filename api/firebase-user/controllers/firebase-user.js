@@ -9,6 +9,11 @@ module.exports = {
   async create(ctx) {
     // create user from firebase token
     ctx.request.body.uid = ctx.state.user.uid;
+
+    //  uncomment the fields you have in content-type
+    //  ctx.request.body.email = ctx.state.user.email;
+    //  ctx.request.body.phoneNumber = ctx.state.user.phoneNumber;
+
     const entity = await strapi.services["firebase-user"].create(
       ctx.request.body
     );
@@ -37,11 +42,17 @@ module.exports = {
     if (ctx.is("multipart")) {
       let { data, files } = parseMultipartData(ctx);
       data.uid = user.uid; // a user must not update uid with req body (same goes for email also)
+      //  uncomment the fields you have in content-type
+      //  data.email = ctx.state.user.email;
+      //  data.phoneNumber = ctx.state.user.phoneNumber;
       entity = await strapi.services["firebase-user"].update({ id }, data, {
         files,
       });
     } else {
       ctx.request.body.uid = user.uid; // a user must not update uid with req body (same goes for email also)
+      //  uncomment the fields you have in content-type
+      //  data.email = ctx.state.user.email;
+      //  data.phoneNumber = ctx.state.user.phoneNumber;
       entity = await strapi.services["firebase-user"].update(
         { id },
         ctx.request.body
